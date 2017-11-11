@@ -1,0 +1,80 @@
+.relative-box {
+  position: relative;
+  top: 550px;
+  height: 50px;
+  width: 30%;
+  color: #fff;
+  font-size: 25px;
+}
+
+
+.box {
+  width: 30%;
+  height: 250px;
+
+  position: absolute;
+  top: 0;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  color: #fff;
+  font-size: 25px;
+  overflow: auto;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.mid {
+  left: 35.5%;
+}
+
+.last {
+  right: 0;
+}
+
+.down-side {
+  top: 300px;
+}
+
+.fixed-box {
+  position: fixed;
+
+  width: 150px;
+  height: 150px;
+}
+
+.middle {
+  left: 260px;
+  top: 150px;
+}
+
+.down {
+  bottom: 0;
+  right: 250px;
+  width: 600px;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+p {
+  font-size: 25px;
+  color: #777;
+}
+
+.bordered {
+  border: 1px solid black;
+  color: black;
+}
