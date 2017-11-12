@@ -1,0 +1,96 @@
+h1 { /* <- styling a specific tag */
+  color: red;
+}
+
+.class1 { /* <- styling a specific class */
+  font-size: 20px;
+}
+
+#id1 { /* <- styling a specific id */
+  font-weight: 700;
+}
+
+span.class1 { /* stayling specific tags that have the specific class */
+  background-color: rgb(255, 0, 0);
+}
+
+/*
+Fonts :
+Only fonts that are updated in the clint side would work.
+Therefor, we can give more than 1 font.
+And the browser would try them one by one. (by ther same order we used)
+*/
+
+.special-font {
+  font-size: 30px;
+  font-family: 'Brush Script MT', arial, sans-serif;
+  /*
+    If the user don't have arial installed,
+    will be using san-serif - a font that avalible on all browsers.
+  */
+}
+
+/* font weights */
+.font-weight100 { /* light */
+  font-weight: 100;
+}
+
+.font-weight400 { /* standart */
+  font-weight: 400;
+}
+
+.font-weight700 { /* bold */
+  font-weight: 700;
+}
+
+
+
+/*
+points system:
+The strongest selector, overrides the others.
+Selector gets points that way:
+tag = 1 point.
+class = 10 points.
+id = 100 points.
+*/
+
+.red-color { /* 10 points */
+  color: red;
+}
+
+
+/* Last css, will overide those before him */
+
+h2 { /* First */
+  background-color: yellow;
+
+}
+
+h2 { /* last - override */
+  background-color: #00E500;
+  color: blue; /* 1 point. will be overrided */
+}
+
+p.red-color { /* 11 points - will override the original */
+  color: #fff;
+  background-color: #000;
+}
+
+div span{ /* one of the span fathers is a div */
+  border: 2px solid black;
+}
+
+body * { /* all tags inide body. very week selector */
+  color: #555;
+}
+
+@media print { /* style when client choose print */
+  * {
+    font-family: cursive !important;
+    /* important make the css style override every other style */
+  }
+}
+
+h1:hover {
+  background-color: yellow;
+}
