@@ -13,11 +13,18 @@ Semantic HTML
 
 ## CSS
 ```sh
+Basic css
+Selectors
 Positions
 ```
 ## Java Script
 ```sh
 
+```
+
+## Git
+```sh
+Basic commands to use git and github.
 ```
 
 ## Bootstrap
