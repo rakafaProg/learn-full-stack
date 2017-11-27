@@ -13,8 +13,10 @@
     <h1>PHP</h1>
     <nav>
         <ul>
-            <li><a href="index.php">home</a></li>
-            <li><a href="login.php">login</a></li>
-            <li><a href="session.php">session</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="session.php">Session</a></li>
+            <li><a href="classes.php">Classes</a></li>
+            
         </ul>
     </nav>
