@@ -8,8 +8,19 @@
     function idValidation($tz) {
         if(strlen($tz)!=9)
             return false;
-        else
-            return true;
+        else {
+            $sum = 0;
+            for ($i = 0; $i < strlen($tz); $i++) {
+                $temp = intval($tz[$i]);
+                $temp *= ($i % 2) + 1;
+                if ($temp > 9) 
+                    $temp = ($temp % 10) + intval($temp / 10);
+                $sum += $temp;
+            }
+            if ($sum % 10 == 0)
+                return true;
+            return false;
+        }
     }
 
     class Student {
@@ -71,12 +82,18 @@
         $family = $_POST['family'];
         $email = $_POST['email'];
 
-        $student2 = new Student($tz, $name, $family, $email);
+        try {
+            $student2 = new Student($tz, $name, $family, $email);
 
-        $myfile = fopen("details.txt", "a") or die("Unable to open file!");
+            $myfile = fopen("details.txt", "a") or die("Unable to open file!");
 
-        fwrite($myfile, $student2->getFullDetails() . "\r\n");
-        fclose($myfile);
+            fwrite($myfile, $student2->getFullDetails() . "\r\n");
+            fclose($myfile);
+        }
+        catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+        
 
     }
 ?>
@@ -84,7 +101,7 @@
         <h2>Leave details</h2>
         <form class="form-inline" action="classes.php" method="post" novalidate>
             <div class="form-group">
-                <label for="tz">Name</label>
+                <label for="tz">Certification</label>
                 <input type="text" class="form-control" id="tz" name="tz" placeholder="cetification">
             </div>
             <div class="form-group">
